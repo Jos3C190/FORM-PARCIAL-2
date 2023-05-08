@@ -24,8 +24,8 @@ form.addEventListener('submit', function(event){
     costoTotal += costoAddFinSemana;
   }
 
-  let PartesHora = horaSalida.split(':');
-  let hora = parseInt(PartesHora[0]); //se obtiene solamente la parte de la hora
+  let partesHora = horaSalida.split(':');
+  let hora = parseInt(partesHora[0]); //se obtiene solamente la parte de la hora
 
   if ((hora >= 7 && hora < 9) || (hora >= 16 && hora < 18)) {
     costoTotal += costoAddHora;
