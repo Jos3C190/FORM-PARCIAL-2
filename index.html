@@ -17,7 +17,17 @@
           <form class="form needs-validation" novalidate>
             <div class="mb-3">
               <label for="origen" class="form-label">Ciudad de origen:</label>
-              <input type="text" id="origen" class="form-control" required>
+              <select class="form-select" aria-label="Default select example" id="origen" required>
+                <option selected disabled value="">Open to select city</option>
+                <option value="1">Nueva York</option>
+                <option value="2">Los Ángeles</option>
+                <option value="3">Chicago</option>
+                <option value="4">San Francisco</option>
+                <option value="5">Miami</option>
+                <option value="6">Las Vegas</option>
+                <option value="7">Washington D.C.</option>
+                <option value="8">Boston</option>
+              </select>
               <div class="invalid-feedback">
                 Please fill in this field.
               </div>
@@ -25,7 +35,16 @@
     
             <div class="mb-3">
               <label for="destino" class="form-label">Ciudad de destino:</label>
-              <input type="text" id="destino" class="form-control" required>
+              <select class="form-select" aria-label="Default select example" id="destino" required>
+                <option selected disabled value="">Open to select city</option>
+                <option value="1">Nueva York</option>
+                <option value="2">Los Ángeles</option>
+                <option value="3">Chicago</option>
+                <option value="4">San Francisco</option>
+                <option value="5">Miami</option>
+                <option value="6">Las Vegas</option>
+                <option value="8">Boston</option>
+              </select>
               <div class="invalid-feedback">
                 Please fill in this field.
               </div>

@@ -10,32 +10,32 @@ let form = document.querySelector('form');
 form.addEventListener('submit', function(event){
   event.preventDefault()
 
-  let ciudadOrigen = document.getElementById('origen').value.toLowerCase();
-  let ciudadDestino = document.getElementById('destino').value.toLowerCase();
+  let ciudadOrigen = document.getElementById('origen').value;
+  let ciudadDestino = document.getElementById('destino').value;
   let fechaSalida = new Date(document.getElementById('fecha').value);
   let horaSalida = document.getElementById('hora').value;
-  let Total = costoBase;
+  let costoTotal = costoBase;
 
   if (ciudadOrigen !== ciudadDestino) {
-    Total += costoAddCiudad;
+    costoTotal += costoAddCiudad;
   }
 
   if (fechaSalida.getUTCDay() === 0 || fechaSalida.getUTCDay() === 5 || fechaSalida.getUTCDay() === 6) {
-    Total += costoAddFinSemana;
+    costoTotal += costoAddFinSemana;
   }
 
   let PartesHora = horaSalida.split(':');
   let hora = parseInt(PartesHora[0]); //se obtiene solamente la parte de la hora
 
   if ((hora >= 7 && hora < 9) || (hora >= 16 && hora < 18)) {
-    Total += costoAddHora;
+    costoTotal += costoAddHora;
   }
 
   if (ciudadOrigen === '' || ciudadDestino === '' || isNaN(fechaSalida) || horaSalida === '') {
     document.getElementById('costo').textContent = "Fill in all fields.";
     document.getElementById('costo').style.color = "red"
   }else{
-    document.getElementById('costo').textContent = "$" + Total;
+    document.getElementById('costo').textContent = "$" + costoTotal;
     document.getElementById('costo').style.color = "green"
   }
 })
