@@ -1,0 +1,35 @@
+.row{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .center-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 75%;
+    }
+  .side-image{
+      background-image: url("images/ImagePlane.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+  }
+  .card{
+    border: none;
+    width: 100%;
+    padding: 0%;
+  }
+  @media (max-width: 734px) {
+    .side-image {
+      display: none;
+      position: relative;
+    }
+    .col-sm-6{
+      width: 100%;
+    }
+  }
